@@ -1,3 +1,5 @@
+//Anwar delgado silva, calificó: Héctor. 4/5.
+
 // Tenemos una lista de productos
 
 const productos = [ 
