@@ -1,6 +1,6 @@
-// Tenemos un li de productos
+// Tenemos una lista de productos
 
-const productos = [
+const productos = [ 
   {nombre: "Zapato negro", tipo: "zapato", color: "negro", img: "./taco-negro.jpg"},
   {nombre: "Zapato azul", tipo: "zapato", color: "azul", img: "./taco-azul.jpg"},
   {nombre: "Bota negra", tipo: "bota", color: "negro", img: "./bota-negra.jpg"},
@@ -8,8 +8,8 @@ const productos = [
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
 
-const li = document.getElementsByName("lista-de-productos")
-const $i = document.querySelector('.input');
+const lista= document.getElementsByName("lista-de-productos")
+const input = document.querySelector('.input');
 
 for (let i = 0; i < productos.length; i++) {
   var d = document.createElement("div")
@@ -25,18 +25,18 @@ for (let i = 0; i < productos.length; i++) {
   d.appendChild(ti)
   d.appendChild(imagen)
 
-  li.appendChild(d)
+  lista.appendChild(d)
 }
 
 displayProductos(productos)
 const botonDeFiltro = document.querySelector("button");
 
-botonDeFiltro.onclick = function() {
-  while (li.firstChild) {
-    li.removeChild(li.firstChild);
+botonDeFiltro.oncck = function() {
+  while (lista.firstChild) {
+    lista.removeChild(lista.firstChild);
   }
 
-  const texto = $i.value;
+  const texto = input.value;
   console.log(texto);
   const productosFiltrados = filtrado(productos, texto );
 
@@ -54,7 +54,7 @@ botonDeFiltro.onclick = function() {
     d.appendChild(ti)
     d.appendChild(imagen)
   
-    li.appendChild(d)
+    lista.appendChild(d)
   }
 }
 
